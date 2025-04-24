@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Select Topic</title></head>
+<body>
+    <h2>Select a Topic</h2>
+    <form method="POST" action="/quiz">
+        {% for topic in topics %}
+            <input type="radio" name="topic" value="{{ topic }}" required> {{ topic }}<br>
+        {% endfor %}
+        <input type="submit" value="Start Quiz">
+    </form>
+</body>
+</html>
